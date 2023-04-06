@@ -2,8 +2,8 @@
 
 let
   ltsVariant = {
-    version = "6.1.21";
-    hash = "sha256-IiKQxYN73DVHpjDtQ43+wlRFkNDNALAxiZSwvEUfQjI=";
+    version = "6.1.24";
+    hash = "sha256-+wiOBGlKGXtcnX1G0G4XpMMYYcYTw2ReHwO0tyhUrB0=";
     variant = "lts";
   };
 
@@ -14,7 +14,7 @@ let
     src = fetchFromGitHub {
       owner = "sunlightlinux";
       repo = "linux-sunlight";
-      rev = modDirVersion;
+      rev = "${modDirVersion}-devel3";
       inherit hash;
     };
 
