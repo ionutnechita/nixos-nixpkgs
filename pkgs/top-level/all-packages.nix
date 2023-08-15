@@ -41288,6 +41288,8 @@ with pkgs;
 
   yandex-browser = callPackage ../applications/networking/browsers/yandex-browser { };
 
+  yandex-browser-beta = callPackage ../applications/networking/browsers/yandex-browser-beta { };
+
   yandex-disk = callPackage ../tools/filesystems/yandex-disk { };
 
   yandex-ffmpeg-codecs = callPackage ../applications/networking/browsers/yandex-ffmpeg-codecs { };
