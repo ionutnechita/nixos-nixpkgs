@@ -41290,6 +41290,8 @@ with pkgs;
 
   yandex-disk = callPackage ../tools/filesystems/yandex-disk { };
 
+  yandex-ffmpeg-codecs = callPackage ../applications/networking/browsers/yandex-ffmpeg-codecs { };
+
   yara = callPackage ../tools/security/yara { };
 
   yaralyzer = callPackage ../tools/security/yaralyzer { };

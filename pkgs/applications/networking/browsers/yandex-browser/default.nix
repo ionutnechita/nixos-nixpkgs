@@ -47,6 +47,7 @@
 , at-spi2-atk
 , at-spi2-core
 , libqt5pas
+, yandex-ffmpeg-codecs
 }:
 
 stdenv.mkDerivation rec {
@@ -119,6 +120,7 @@ stdenv.mkDerivation rec {
   installPhase = ''
     cp $TMP/ya/{usr/share,opt} $out/ -R
     substituteInPlace $out/share/applications/yandex-browser.desktop --replace /usr/ $out/
+    ln -sf ${yandex-ffmpeg-codecs}/lib/libffmpeg.so $out/opt/yandex/browser/libffmpeg.so
     ln -sf $out/opt/yandex/browser/yandex-browser $out/bin/yandex-browser
     ln -sf $out/opt/yandex/browser/yandex-browser $out/bin/yandex-browser-stable
   '';
@@ -127,6 +129,7 @@ stdenv.mkDerivation rec {
     libpulseaudio
     curl
     systemd
+    yandex-ffmpeg-codecs
   ] ++ buildInputs;
 
   meta = with lib; {
